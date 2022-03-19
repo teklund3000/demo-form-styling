@@ -17,6 +17,7 @@ body {
 
 header {
     background-color: var(--cream);
+    margin-bottom: 3rem;
 }
 
 header > .inner-container {
@@ -27,11 +28,53 @@ header > .inner-container {
 
 input [id=search] {
     padding: 0.5rem;
-    padding-left: 2rem;
+    padding-left: 2.5rem;
     border-radius: 5px;
     border: 1px solid var(--lt-grey);
     background-image: url(../img/magnifying-glass.svg);
     background-size: 1.5rem 1.5rem;
     background-repeat: no-repeat;
     background-position: center left 8px;
+}
+
+form [name=login] {
+    border: 1px solid var(--lt-grey);
+    box-shadow: 3px 3px 5px var(--lt-grey);
+    padding: 1.5rem;
+}
+label {
+    display: block;
+}
+form > div {
+    margin-bottom: 1rem;
+}
+input [id=email],
+input [id=pw] {
+    padding: 0 0.5rem;
+    line-height: 1.875rem;
+    width: 14.375rem;
+    border: 2px solid var(--yellow);
+    border-bottom: 1px solid var(--lt-grey);
+}
+
+input [type=submit] {
+    background-color: var(--yellow);
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+}
+
+input[id=email]:invalid,
+input[id=pw]:invalid {
+    outline: 2px solid tomato;
+}
+input[id=email]:valid,
+input[id=pw]:valid {
+    outline: 2px solid green;
 }
